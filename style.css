@@ -1,0 +1,413 @@
+body {
+    background-color: rgb(141, 179, 197);
+    overflow: hidden;
+}
+#grey {
+    background-color: grey;
+    height: 1000%;
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.start-screen {
+    background-image: url('brick_wall.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer  {
+    z-index: 800;
+    display: none;
+    position: absolute;
+    top: 1px;
+    left: 45%;
+    font-size: 48px;
+    color: rgb(214, 162, 128);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.title {
+    width: 80%;
+    margin-top: 200px;
+}
+.play {
+    cursor: pointer;
+    width: 300px;
+    margin-top: 100px;
+}
+.try-again {
+    cursor: pointer;
+    width: 200px;
+    position: absolute;
+    top: 335px;
+    left: 186px;
+    z-index: 1;
+    display: none;
+}
+.clicked {
+    animation: moveOut 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+@keyframes moveOut {
+    0% { margin-top: 100px; }
+    100% { margin-top: 600px; } 
+}
+.game-area {
+    width: 600px;
+    height: 600px;
+    background-image: url("ground.jpeg");
+    background-size: 50px;
+    border: 10px;
+    border-style: solid;
+    border-color: #2b6014;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    position: relative;
+    padding: 0;
+}
+p {
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    margin: 0 150px;
+}
+.player {
+    position: absolute;
+    height: 35px;
+    left: 5px;
+    top: 0px;
+}
+
+.flip-horizontal {
+    transform: scaleX(-1);
+}
+.item1{
+    display: block;
+    position: absolute;
+    border-radius: 60px;
+    width: 30px;
+    left: 60px;
+    top: 270px;
+}
+.item2{
+    display: block;
+    position: absolute;
+    border-radius: 60px;
+    width: 30px;
+    left: 440px;
+    top: 465px;
+}
+.item3{
+    display: block;
+    position: absolute;
+    border-radius: 60px;
+    width: 30px;
+    left: 560px;
+    top: 120px;
+}
+@keyframes patrolSquare {
+    0%, 100% {
+      transform: translate(-20px, -20px);
+    }
+    25% {
+      transform: translate(20px, -20px); /* Move right */
+    }
+    50% {
+      transform: translate(20px, 20px); /* Move down */
+    }
+    75% {
+      transform: translate(-20px, 20px); /* Move left */
+    }
+  }
+#minotaur {
+    display: block;
+    position: absolute;
+    width: 60px;
+    left: 270px;
+    top: 250px;
+    animation: patrolSquare 8s ease-in-out infinite;
+}
+#result {
+    position: absolute;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 600;
+    color: rgb(217, 141, 0);
+    z-index: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#time-up {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    left: 23%;
+    margin-top: 100px;
+    font-weight: 600;
+    color: rgb(217, 141, 0);
+    z-index: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.wall {
+    position: absolute;
+    overflow: hidden;
+    background-image: url("bush.jpeg");
+    background-size: 100px;
+}
+.wall0 {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    width: 10px;
+    height: 100px;
+    background-color: gray;
+}
+.wall1 {
+    position: absolute;
+    left: 40px;
+    width: 10px;
+    height: 400px;
+}
+.wall2 {
+    position: absolute;
+    left: 40px;
+    top: 550px;
+    width: 380px;
+    height: 10px;
+    background-color: gray;
+}
+.wall3 {
+    position: absolute;
+    left: 480px;
+    top: 550px;
+    width: 120px;
+    height: 10px;
+    background-color: gray;
+}
+.wall4 {
+    position: absolute;
+    left: 100px;
+    top: 500px;
+    width: 390px;
+    height: 10px;
+}
+.wall5 {
+    position: absolute;
+    left: 480px;
+    top:450px;
+    width: 10px;
+    height: 50px;
+    background-color: gray;
+}
+.wall6 {
+    position: absolute;
+    left: 540px;
+    top: 400px;
+    width: 10px;
+    height: 110px;
+    background-color: gray;
+}
+.wall7 {
+    position: absolute;
+    left: 90px;
+    top: 50px;
+    width: 10px;
+    height: 400px;
+    background-color: gray;
+}
+.wall8 {
+    position: absolute;
+    left:  40px;
+    top:   450px;
+    width: 60px;
+    height: 10px;
+    background-color: gray;
+}
+.wall9 {
+    position: absolute;
+    left: 270px;
+    top:450px;
+    width: 220px;
+    height: 10px;
+    background-color: gray;
+}
+.wall10 {
+    position: absolute;
+    left: 210px;
+    top:  400px;
+    width: 340px;
+    height: 10px;
+    background-color: gray;
+}
+.wall11 {
+    position: absolute;
+    left: 210px;
+    top: 400px;
+    width: 10px;
+    height: 100px;
+    background-color: gray;
+}
+.wall12 {
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    width: 10px;
+    height: 310px;
+    background-color: gray;
+}
+/* .wall13 {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+} */
+.wall14 {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    width: 50px;
+    height: 10px;
+    background-color: gray;
+}
+.wall15 {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+    width: 340px;
+    height: 10px;
+    background-color: gray;
+}
+.wall16 {
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    width: 290px;
+    height: 10px;
+    background-color: gray;
+}
+.wall17 {
+    position: absolute;
+    left: 40px;
+    top: 250px;
+    width: 50px;
+    height: 10px;
+    background-color: gray;
+}
+.wall18 {
+    position: absolute;
+    left: 210px;
+    top: 200px;
+    width: 10px;
+    height: 150px;
+    background-color: gray;
+}
+.wall19 {
+    position: absolute;
+    left: 210px;
+    top:  340px;
+    width: 390px;
+    height: 10px;
+    background-color: gray;
+}
+.wall20 {
+    position: absolute;
+    left: 210px;
+    top:  200px;
+    width: 160px;
+    height: 10px;
+    background-color: gray;
+}
+.wall21 {
+    position: absolute;
+    left: 370px;
+    top: 200px;
+    width: 10px;
+    height: 40px;
+    background-color: gray;
+}
+.wall22 {
+    position: absolute;
+    left: 480px;
+    top: 50px;
+    width: 10px;
+    height: 250px;
+    background-color: gray;
+}
+.wall23 {
+    position: absolute;
+    left: 540px;
+    top: 280px;
+    width: 10px;
+    height: 60px;
+    background-color: gray;
+}
+.wall24 {
+    position: absolute;
+    left: 370px;
+    top: 310px;
+    width: 10px;
+    height: 30px;
+    background-color: gray;
+}
+.wall25 {
+    position: absolute;
+    left: 540px;
+    top: 100px;
+    width: 10px;
+    height: 130px;
+    background-color: gray;
+}
+.wall26 {
+    position: absolute;
+    left: 430px;
+    top: 150px;
+    width: 10px;
+    height: 100px;
+    background-color: gray;
+}
+.wall27 {
+    position: absolute;
+    left: 430px;
+    top: 320px;
+    width: 10px;
+    height: 30px;
+    background-color: gray;
+}
+.wall28 {
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    width: 10px;
+    height: 60px;
+    background-color: gray;
+}
+.wall29 {
+    position: absolute;
+    left: 260px;
+    top: 50px;
+    width: 290px;
+    height: 10px;
+    background-color: gray;
+}
+.wall30 {
+    position: absolute;
+    left: 540px;
+    top: 100px;
+    width: 60px;
+    height: 10px;
+    background-color: gray;
+}

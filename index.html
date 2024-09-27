@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labyrinth of Minos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="timer">30:000</div>
+<div id="grey"></div>
+<audio id="victory" src="victory.m4a" preload="auto"></audio>
+<audio id="music" src="music.m4a" preload="auto"></audio>
+    <audio id="itemSound" src="kling.m4a" preload="auto"></audio>
+    <audio id="minotaurDead" src="minotaur_dying.m4a" preload="auto"></audio>
+    <audio id="playerDead" src="dying_creature.m4a" preload="auto"></audio>
+    <audio id="walk" src="coblestone.m4a" preload="auto"></audio>
+    <div class="start-screen">
+            <img class="title" src="title.png" alt="">
+            <!-- <p>Embark on a thrilling journey through the legendary Labyrinth of Minos! 
+                    It was a maze so intricately designed that none who enter can find their way out. 
+                    <br><br>
+                    Constructed over 3000 years ago by the architect Daedalus at the command of King Minos, 
+                    the labyrinth served both as a house for the Minotaur but also to prevent it from escaping!
+                    <br><br>
+                    The minotaur is the offspring of Pasiphaë (the wife of King Minos), and a magnificent bull sent by the god Poseidon. 
+                    This unusual birth was a result of a curse from Poseidon, whom Minos had angered.
+                    <br><br>
+                    In "Labyrinth of Minos", you play as the brave hero Theseus, a prince from Athens who volunteered to enter the labyrinth. 
+                    <br><br>
+                    Your mission: navigate the twisting pathways, overcome challenges, and collect sacred items that boost your strength against evil. 
+                    But beware! The Minotaur lurks in the heart of the maze, and you must use all your wits and skills to confront and defeat this monstrous beast.
+                    <br><br>
+                    Will you emerge victorious and claim your place in legend, or will the labyrinth claim another victim? 
+                    The choice is yours in Labyrinth of Minos
+            </p> -->
+        <img src="play_button.png" alt="" class="play">
+    </div>
+
+    <div class="game-area">
+        <img src="try-again.png" alt="" class="try-again">
+        <div id="result"></div>
+        <div id="time-up"></div>
+        <img src="static_player.png" class="player" id="player"></img>
+        <div class="wall0 wall"></div>
+        <div class="wall1 wall"></div>
+        <div class="wall2 wall"></div>
+        <div class="wall3 wall"></div>
+        <div class="wall4 wall"></div>
+        <div class="wall5 wall"></div>
+        <div class="wall6 wall"></div>
+        <div class="wall7 wall"></div>
+        <div class="wall8 wall"></div>
+        <div class="wall9 wall"></div>
+        <div class="wall10 wall"></div>
+        <div class="wall11 wall"></div>
+        <div class="wall12 wall"></div>
+        <div class="wall13 wall"></div>
+        <div class="wall14 wall"></div>
+        <div class="wall15 wall"></div>
+        <div class="wall16 wall"></div>
+        <div class="wall17 wall"></div>
+        <div class="wall18 wall"></div>
+        <div class="wall19 wall"></div>
+        <div class="wall20 wall"></div>
+        <div class="wall21 wall"></div>
+        <div class="wall22 wall"></div>
+        <div class="wall23 wall"></div>
+        <div class="wall24 wall"></div>
+        <div class="wall25 wall"></div>
+        <div class="wall26 wall"></div>
+        <div class="wall27 wall"></div>
+        <div class="wall28 wall"></div>
+        <div class="wall29 wall"></div>
+        <div class="wall30 wall"></div>
+        <img src="sword.png" class="item1 item"></img>
+        <img src="sword.png" class="item2 item"></img>
+        <img src="sword.png" class="item3 item"></img>
+        <img src="minotauer.png" id="minotaur"></img>
+    </div>
+    
+<script src="game.js"></script>
+</body>
+</html>
